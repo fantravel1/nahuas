@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!-- Character Encoding & Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Page Not Found — Nahuas.com</title>
+  <meta name="description" content="The page you are looking for does not exist. Return to Nahuas.com to explore Nahua civilization, history, language, religion, and culture.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://nahuas.com/404.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nahuas.com/404.html">
+  <meta property="og:title" content="Page Not Found — Nahuas.com">
+  <meta property="og:description" content="The page you are looking for does not exist. Return to Nahuas.com to explore Nahua civilization.">
+  <meta property="og:site_name" content="Nahuas.com">
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Inline Styles for 404 Content -->
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+    .error-page__code {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 800;
+      line-height: 1;
+      color: var(--color-primary, #1a1a2e);
+      opacity: 0.15;
+      margin-bottom: -1rem;
+    }
+    .error-page__glyph {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .error-page__messages {
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+    }
+    .error-page__message {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0.5rem 0;
+      color: var(--color-text, #1a1a2e);
+    }
+    .error-page__message--nah {
+      font-style: italic;
+      opacity: 0.85;
+    }
+    .error-page__message--es {
+      opacity: 0.85;
+    }
+    .error-page__desc {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+      color: var(--color-text-muted, #555);
+      line-height: 1.6;
+    }
+    .error-page__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ============ Skip Link (Accessibility) ============ -->
+  <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Nahuas.com Home">
+        <span class="logo-icon" aria-hidden="true">&#9788;</span>
+        <span>NAHUAS</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="history.html" data-i18n="nav.history">History</a></li>
+          <li><a href="religion.html" data-i18n="nav.religion">Religion &amp; Cosmology</a></li>
+          <li><a href="language.html" data-i18n="nav.language">Nahuatl Language</a></li>
+          <li><a href="maps.html" data-i18n="nav.maps">Maps &amp; Atlas</a></li>
+          <li><a href="figures.html" data-i18n="nav.figures">Famous Figures</a></li>
+          <li><a href="culture.html" data-i18n="nav.culture">Culture &amp; Society</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-switcher__btn" aria-expanded="false" aria-haspopup="true" aria-label="Select language">
+            <span class="lang-switcher__current">EN</span>
+            <span aria-hidden="true">&#9662;</span>
+          </button>
+          <div class="lang-switcher__dropdown" role="menu">
+            <button data-lang="en" class="active" role="menuitem">
+              <span>EN</span>
+              <span data-i18n="lang.en">English</span>
+            </button>
+            <button data-lang="es" role="menuitem">
+              <span>ES</span>
+              <span data-i18n="lang.es">Spanish</span>
+            </button>
+            <button data-lang="nah" role="menuitem">
+              <span>NAH</span>
+              <span data-i18n="lang.nah">Nahuatl</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="a11y.menu.open" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ Mobile Navigation Drawer ============ -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="history.html" data-i18n="nav.history">History</a></li>
+      <li><a href="religion.html" data-i18n="nav.religion">Religion &amp; Cosmology</a></li>
+      <li><a href="language.html" data-i18n="nav.language">Nahuatl Language</a></li>
+      <li><a href="maps.html" data-i18n="nav.maps">Maps &amp; Atlas</a></li>
+      <li><a href="figures.html" data-i18n="nav.figures">Famous Figures</a></li>
+      <li><a href="culture.html" data-i18n="nav.culture">Culture &amp; Society</a></li>
+    </ul>
+    <div class="mobile-lang-section">
+      <h3 data-i18n="lang.select">Language</h3>
+      <div class="mobile-lang-buttons">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="es">ES</button>
+        <button data-lang="nah">NAH</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ Main Content ============ -->
+  <main id="main-content">
+    <section class="error-page" aria-labelledby="error-title">
+      <div class="error-page__code" aria-hidden="true">404</div>
+      <span class="error-page__glyph" aria-hidden="true">&#9788;</span>
+      <div class="error-page__messages">
+        <h1 id="error-title" class="error-page__message">Page Not Found</h1>
+        <p class="error-page__message error-page__message--es">P&aacute;gina no encontrada</p>
+        <p class="error-page__message error-page__message--nah">Amo oniquittac in amatl</p>
+        <p class="error-page__desc">The page you are looking for may have been moved, removed, or never existed. Use the navigation above or return home to continue exploring Nahua civilization.</p>
+      </div>
+      <div class="error-page__actions">
+        <a href="index.html" class="btn btn--primary btn--lg">Return to Homepage</a>
+        <a href="history.html" class="btn btn--secondary btn--lg">Explore History</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="footer-brand__name">NAHUAS</div>
+          <p class="footer-brand__desc" data-i18n="footer.brand.desc">The definitive global platform for Nahua civilization, language preservation, and cultural understanding.</p>
+        </div>
+        <!-- Explore Column -->
+        <nav class="footer-nav" aria-label="Explore">
+          <h4 data-i18n="footer.explore">Explore</h4>
+          <ul>
+            <li><a href="history.html" data-i18n="nav.history">History</a></li>
+            <li><a href="religion.html" data-i18n="nav.religion">Religion &amp; Cosmology</a></li>
+            <li><a href="language.html" data-i18n="nav.language">Nahuatl Language</a></li>
+          </ul>
+        </nav>
+        <!-- Learn Column -->
+        <nav class="footer-nav" aria-label="Learn">
+          <h4 data-i18n="footer.learn">Learn</h4>
+          <ul>
+            <li><a href="language.html#lessons" data-i18n="language.lessons">Language Lessons</a></li>
+            <li><a href="language.html#dictionary" data-i18n="language.dictionary">Nahuatl Dictionary</a></li>
+            <li><a href="language.html#codex" data-i18n="language.codex">Codex Archive</a></li>
+          </ul>
+        </nav>
+        <!-- About Column -->
+        <nav class="footer-nav" aria-label="About">
+          <h4 data-i18n="footer.about">About</h4>
+          <ul>
+            <li><a href="about.html#mission" data-i18n="footer.about.mission">Our Mission</a></li>
+            <li><a href="about.html#sources" data-i18n="footer.about.sources">Sources &amp; Citations</a></li>
+            <li><a href="about.html#contribute" data-i18n="footer.about.contribute">Contribute</a></li>
+            <li><a href="contact.html" data-i18n="footer.about.contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <span class="footer-bottom__copy" data-i18n="footer.copyright">&copy; 2026 Nahuas.com &mdash; The Global Home of Nahua Knowledge</span>
+        <div class="footer-bottom__links">
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Scripts ============ -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
