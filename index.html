@@ -54,6 +54,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/visuals.css">
 
   <!-- JSON-LD Structured Data: Organization -->
   <script type="application/ld+json">
@@ -253,8 +254,12 @@
   <main id="main-content">
 
     <!-- ======== Hero Section ======== -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero hero--visual" aria-labelledby="hero-title">
       <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="hero__floating-glyphs" aria-hidden="true">
+        <span>&#9788;</span><span>&#127758;</span><span>&#128013;</span><span>&#129413;</span><span>&#127804;</span>
+        <span>&#128166;</span><span>&#9734;</span><span>&#127774;</span><span>&#128293;</span><span>&#127793;</span>
+      </div>
       <div class="hero__content">
         <span class="hero__badge fade-in" data-i18n="hero.badge">The Definitive Nahua Civilization Portal</span>
         <h1 id="hero-title" class="hero__title fade-in">
@@ -275,24 +280,30 @@
       <div class="container">
         <div class="stats-bar fade-in">
           <div class="stat-item">
-            <div class="stat-item__number">1,500+</div>
+            <div class="stat-item__number" data-counter="1500" data-counter-suffix="+">1,500+</div>
             <div class="stat-item__label" data-i18n="stats.years">Years of History</div>
           </div>
           <div class="stat-item">
-            <div class="stat-item__number">1.7M+</div>
+            <div class="stat-item__number" data-counter="1700000" data-counter-suffix="+">1.7M+</div>
             <div class="stat-item__label" data-i18n="stats.speakers">Nahuatl Speakers Today</div>
           </div>
           <div class="stat-item">
-            <div class="stat-item__number">500+</div>
+            <div class="stat-item__number" data-counter="500" data-counter-suffix="+">500+</div>
             <div class="stat-item__label" data-i18n="stats.communities">Living Communities</div>
           </div>
           <div class="stat-item">
-            <div class="stat-item__number">100+</div>
+            <div class="stat-item__number" data-counter="100" data-counter-suffix="+">100+</div>
             <div class="stat-item__label" data-i18n="stats.codices">Surviving Codices</div>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="container">
+      <div class="divider">
+        <div class="divider__glyph">&#9670;</div>
+      </div>
+    </div>
 
     <!-- ======== Pillars Section ======== -->
     <section class="section" aria-labelledby="pillars-title">
@@ -349,6 +360,12 @@
       </div>
     </section>
 
+    <div class="container">
+      <div class="divider">
+        <div class="divider__glyph">&#9670;</div>
+      </div>
+    </div>
+
     <!-- ======== Featured Content Section ======== -->
     <section class="section section--alt" aria-labelledby="featured-title">
       <div class="container">
@@ -384,6 +401,104 @@
               <p class="featured-card__excerpt" data-i18n="featured.nezahualcoyotl.excerpt">The extraordinary life of the philosopher-king who shaped Nahua intellectual traditions and left an enduring poetic legacy.</p>
             </div>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Visual Gallery Section ======== -->
+    <section class="section pattern-step-fret" id="gallery">
+      <div class="container">
+        <div class="section__header fade-in">
+          <span class="section__eyebrow">Visual Archive</span>
+          <h2 class="section__title">Explore Nahua Civilization Visually</h2>
+          <p class="section__desc">Illustrations inspired by Mesoamerican art, codex manuscripts, and archaeological discoveries.</p>
+        </div>
+        <div class="visual-gallery fade-in">
+          <div class="visual-gallery__item visual-gallery__item--wide" data-svg="templo-mayor">
+            <div class="visual-gallery__caption">
+              <h4>Templo Mayor of Tenochtitlan</h4>
+              <p>The great twin temple at the heart of the Mexica capital, dedicated to Huitzilopochtli and Tlaloc.</p>
+            </div>
+          </div>
+          <div class="visual-gallery__item" data-svg="quetzalcoatl">
+            <div class="visual-gallery__caption">
+              <h4>Quetzalcoatl</h4>
+              <p>The Feathered Serpent, god of wind, learning, and the morning star.</p>
+            </div>
+          </div>
+          <div class="visual-gallery__item" data-svg="sun-stone">
+            <div class="visual-gallery__caption">
+              <h4>The Sun Stone</h4>
+              <p>The iconic Aztec calendar stone depicting the Five Suns of cosmic creation.</p>
+            </div>
+          </div>
+          <div class="visual-gallery__item visual-gallery__item--wide" data-svg="chinampa">
+            <div class="visual-gallery__caption">
+              <h4>Chinampa Gardens</h4>
+              <p>The ingenious floating agricultural system of Xochimilco that fed the empire.</p>
+            </div>
+          </div>
+          <div class="visual-gallery__item" data-svg="eagle-warrior">
+            <div class="visual-gallery__caption">
+              <h4>Eagle Warrior (Cuauhtli)</h4>
+              <p>Elite Mexica warriors who earned their rank through battlefield valor.</p>
+            </div>
+          </div>
+          <div class="visual-gallery__item" data-svg="codex-page">
+            <div class="visual-gallery__caption">
+              <h4>Nahua Codex Manuscript</h4>
+              <p>Pictorial manuscripts recording history, tribute, calendrics, and religious knowledge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider--ornate divider">
+        <div class="divider__glyph">&#9788;</div>
+      </div>
+    </div>
+
+    <!-- ======== Feature Split: Tenochtitlan ======== -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-split fade-in">
+          <div class="feature-split__visual" data-svg="tenochtitlan-map"></div>
+          <div class="feature-split__content">
+            <span class="section__eyebrow">Crown Jewel</span>
+            <h3>The Island Capital: Tenochtitlan</h3>
+            <p>Founded in 1325 on an island in Lake Texcoco, Tenochtitlan grew to become one of the largest cities in the world with a population exceeding 200,000. Its sophisticated system of causeways, canals, aqueducts, and chinampas made it an engineering marvel.</p>
+            <ul class="feature-split__list">
+              <li>Causeways connecting the island to the mainland in four directions</li>
+              <li>Chinampas providing food for the entire population</li>
+              <li>The Templo Mayor rising 60 meters at the sacred center</li>
+              <li>Tlatelolco market serving 60,000 daily visitors</li>
+              <li>Fresh water aqueducts spanning kilometers from Chapultepec</li>
+            </ul>
+            <a href="history.html" class="btn btn--jade">Explore the Full Timeline</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Feature Split: Nahuatl Language ======== -->
+    <section class="section section--alt pattern-serpent">
+      <div class="container">
+        <div class="feature-split feature-split--reverse fade-in">
+          <div class="feature-split__visual" data-svg="codex-page"></div>
+          <div class="feature-split__content">
+            <span class="section__eyebrow">Living Language</span>
+            <h3>1.7 Million Voices: Nahuatl Lives On</h3>
+            <p>Nahuatl is not a dead language. Today, approximately 1.7 million people across Mexico continue to speak varieties of this rich, poetic language. From the Sierra Norte of Puebla to the Huasteca region, Nahuatl thrives in homes, markets, ceremonies, and increasingly in digital spaces.</p>
+            <ul class="feature-split__list">
+              <li>The most widely spoken indigenous language in Mexico</li>
+              <li>Dozens of everyday English words borrowed from Nahuatl</li>
+              <li>Active literary and artistic production in Nahuatl</li>
+              <li>University programs and language revitalization efforts</li>
+            </ul>
+            <a href="language.html" class="btn btn--jade">Start Learning Nahuatl</a>
+          </div>
         </div>
       </div>
     </section>
@@ -436,6 +551,17 @@
               <div class="faq-item__answer-inner" itemprop="text" data-i18n="faq.a4">Nahua codices are pictorial manuscripts created by indigenous scribes before and after the Spanish conquest. They recorded historical events, religious practices, tribute records, calendrical systems, and genealogies. Famous examples include the Codex Mendoza, Codex Borbonicus, and the Florentine Codex. These documents are invaluable primary sources for understanding Nahua civilization.</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Visual Quote Section ======== -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="visual-quote fade-in">
+          <p class="visual-quote__text--nahuatl">Zan yehuan in xochitl, zan yehuan in cuicatl<br>in oncan on nemi nican tlalticpac.</p>
+          <p class="visual-quote__text">Only flowers, only songs<br>remain here upon the earth.</p>
+          <p class="visual-quote__attribution">— Nezahualcoyotl, Tlatoani of Texcoco (1402-1472)</p>
         </div>
       </div>
     </section>
@@ -503,5 +629,8 @@
   <!-- ============ Scripts ============ -->
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/visuals.js"></script>
+
+  <button class="back-to-top" aria-label="Back to top">&#8593;</button>
 </body>
 </html>

@@ -85,6 +85,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/visuals.css">
 </head>
 <body>
 
@@ -199,6 +200,11 @@
           <p class="section__desc" data-i18n="religion.fivesuns.desc">The Nahua believed the universe had been created and destroyed four times before the current era. Each "Sun" represented a cosmic age ruled by a different deity, ending in catastrophic destruction. The current world, the Fifth Sun, was created at Teotihuacan through divine sacrifice.</p>
         </div>
 
+        <div class="cosmology-diagram fade-in">
+          <div data-svg="sun-stone"></div>
+          <p class="cosmology-diagram__label">The Sun Stone (Piedra del Sol) — A visual representation of the Five Suns and the sacred calendar</p>
+        </div>
+
         <!-- Five Suns Timeline -->
         <div class="timeline">
 
@@ -206,6 +212,7 @@
           <div class="timeline-item fade-in">
             <div class="timeline-item__dot" style="border-color: var(--color-gold);"></div>
             <div class="timeline-item__card">
+              <div class="sun-card__visual" data-svg="sun-bg" data-svg-param="1"></div>
               <div class="timeline-item__date">First Sun</div>
               <h3 class="timeline-item__title">Nahui Ocelotl &#8212; Four Jaguar</h3>
               <div class="timeline-item__content">
@@ -220,6 +227,7 @@
           <div class="timeline-item fade-in">
             <div class="timeline-item__dot" style="border-color: var(--color-turquoise);"></div>
             <div class="timeline-item__card">
+              <div class="sun-card__visual" data-svg="sun-bg" data-svg-param="2"></div>
               <div class="timeline-item__date">Second Sun</div>
               <h3 class="timeline-item__title">Nahui Ehecatl &#8212; Four Wind</h3>
               <div class="timeline-item__content">
@@ -234,6 +242,7 @@
           <div class="timeline-item fade-in">
             <div class="timeline-item__dot" style="border-color: var(--color-terracotta);"></div>
             <div class="timeline-item__card">
+              <div class="sun-card__visual" data-svg="sun-bg" data-svg-param="3"></div>
               <div class="timeline-item__date">Third Sun</div>
               <h3 class="timeline-item__title">Nahui Quiahuitl &#8212; Four Rain</h3>
               <div class="timeline-item__content">
@@ -248,6 +257,7 @@
           <div class="timeline-item fade-in">
             <div class="timeline-item__dot" style="border-color: var(--color-jade);"></div>
             <div class="timeline-item__card">
+              <div class="sun-card__visual" data-svg="sun-bg" data-svg-param="4"></div>
               <div class="timeline-item__date">Fourth Sun</div>
               <h3 class="timeline-item__title">Nahui Atl &#8212; Four Water</h3>
               <div class="timeline-item__content">
@@ -262,6 +272,7 @@
           <div class="timeline-item fade-in">
             <div class="timeline-item__dot" style="border-color: var(--color-gold-dark);"></div>
             <div class="timeline-item__card">
+              <div class="sun-card__visual" data-svg="sun-bg" data-svg-param="5"></div>
               <div class="timeline-item__date">Fifth Sun &#8212; The Current Era</div>
               <h3 class="timeline-item__title">Nahui Ollin &#8212; Four Movement</h3>
               <div class="timeline-item__content">
@@ -309,6 +320,8 @@
 
       </div>
     </section>
+
+    <div class="ornate-divider fade-in" aria-hidden="true"><span class="ornate-divider__glyph">&#10040;</span></div>
 
     <!-- ════════════ SECTION 2: MAJOR DEITIES ════════════ -->
     <section id="deities" class="section section--alt">
@@ -387,8 +400,60 @@
 
         </div><!-- /.deity-grid -->
 
+        <div class="deity-panel fade-in">
+          <div class="deity-panel__visual" data-svg="quetzalcoatl"></div>
+          <div class="deity-panel__content">
+            <h3 class="deity-panel__name">Quetzalcoatl</h3>
+            <p class="deity-panel__epithet">Ce Acatl Topiltzin Quetzalcoatl — The Feathered Serpent</p>
+            <div class="deity-panel__attributes">
+              <span class="deity-panel__attr-tag">Wind (Ehecatl)</span>
+              <span class="deity-panel__attr-tag">Morning Star</span>
+              <span class="deity-panel__attr-tag">Knowledge</span>
+              <span class="deity-panel__attr-tag">Creation</span>
+              <span class="deity-panel__attr-tag">Priesthood</span>
+            </div>
+            <p class="deity-panel__desc">Quetzalcoatl, the Feathered Serpent, is one of the most important and complex deities in all of Mesoamerica. Combining the quetzal bird (representing the heavens) with the coatl serpent (representing the earth), this deity embodies the union of sky and earth, spirit and matter. As Ehecatl, the wind god, Quetzalcoatl sweeps the path for the rain gods. As the morning star, he represents death and resurrection. According to tradition, Quetzalcoatl gave humanity maize by descending to the underworld of Mictlan and bringing back the precious bones from which humans were created.</p>
+            <div class="deity-panel__symbolism">
+              <h4>Sacred Symbols</h4>
+              <div class="deity-panel__symbols">
+                <div class="deity-panel__symbol-item"><span class="symbol-icon">🐍</span> Feathered Serpent</div>
+                <div class="deity-panel__symbol-item"><span class="symbol-icon">🌬️</span> Wind / Ehecatl</div>
+                <div class="deity-panel__symbol-item"><span class="symbol-icon">⭐</span> Morning Star (Venus)</div>
+                <div class="deity-panel__symbol-item"><span class="symbol-icon">🌽</span> Maize / Creation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="deity-panel fade-in">
+          <div class="deity-panel__visual" data-svg="eagle-warrior"></div>
+          <div class="deity-panel__content">
+            <h3 class="deity-panel__name">Huitzilopochtli</h3>
+            <p class="deity-panel__epithet">The Hummingbird of the South — Patron of Tenochtitlan</p>
+            <div class="deity-panel__attributes">
+              <span class="deity-panel__attr-tag">War</span>
+              <span class="deity-panel__attr-tag">Sun</span>
+              <span class="deity-panel__attr-tag">Sacrifice</span>
+              <span class="deity-panel__attr-tag">Will</span>
+              <span class="deity-panel__attr-tag">Patron of Mexica</span>
+            </div>
+            <p class="deity-panel__desc">Huitzilopochtli, whose name means "Hummingbird of the South" or "Hummingbird of the Left," was the patron deity of the Mexica people and the god of war and the sun. Born fully armed from his mother Coatlicue on the mountain of Coatepec, he immediately battled and defeated his sister Coyolxauhqui (the moon) and his four hundred brothers the Centzonhuitznahua (the stars). This mythic battle was reenacted daily as the sun rose, conquering the darkness. The Templo Mayor's right shrine was dedicated to him, and the Mexica believed their warriors who died in battle would accompany the sun across the sky.</p>
+            <div class="deity-panel__symbolism">
+              <h4>Sacred Symbols</h4>
+              <div class="deity-panel__symbols">
+                <div class="deity-panel__symbol-item"><span class="symbol-icon">🦅</span> Eagle</div>
+                <div class="deity-panel__symbol-item"><span class="symbol-icon">☀️</span> The Sun</div>
+                <div class="deity-panel__symbol-item"><span class="symbol-icon">🐦</span> Hummingbird</div>
+                <div class="deity-panel__symbol-item"><span class="symbol-icon">🗡️</span> Xiuhcoatl (Fire Serpent)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <div class="ornate-divider fade-in" aria-hidden="true"><span class="ornate-divider__glyph">&#10040;</span></div>
 
     <!-- ════════════ SECTION 3: SACRED CALENDAR ════════════ -->
     <section id="calendar" class="section">
@@ -438,6 +503,29 @@
               <div class="calendar-wheel__day-meaning">Crocodile</div>
             </div>
           </div>
+        </div>
+
+        <div class="day-signs-grid fade-in" style="margin-top:var(--space-2xl)">
+          <div class="day-sign"><div class="day-sign__glyph">🐊</div><div class="day-sign__info"><div class="day-sign__nahuatl">Cipactli</div><div class="day-sign__meaning">Crocodile</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🌬️</div><div class="day-sign__info"><div class="day-sign__nahuatl">Ehecatl</div><div class="day-sign__meaning">Wind</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🏠</div><div class="day-sign__info"><div class="day-sign__nahuatl">Calli</div><div class="day-sign__meaning">House</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🦎</div><div class="day-sign__info"><div class="day-sign__nahuatl">Cuetzpalin</div><div class="day-sign__meaning">Lizard</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🐍</div><div class="day-sign__info"><div class="day-sign__nahuatl">Coatl</div><div class="day-sign__meaning">Serpent</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">💀</div><div class="day-sign__info"><div class="day-sign__nahuatl">Miquiztli</div><div class="day-sign__meaning">Death</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🦌</div><div class="day-sign__info"><div class="day-sign__nahuatl">Mazatl</div><div class="day-sign__meaning">Deer</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🐇</div><div class="day-sign__info"><div class="day-sign__nahuatl">Tochtli</div><div class="day-sign__meaning">Rabbit</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">💧</div><div class="day-sign__info"><div class="day-sign__nahuatl">Atl</div><div class="day-sign__meaning">Water</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🐕</div><div class="day-sign__info"><div class="day-sign__nahuatl">Itzcuintli</div><div class="day-sign__meaning">Dog</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🐒</div><div class="day-sign__info"><div class="day-sign__nahuatl">Ozomatli</div><div class="day-sign__meaning">Monkey</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🌾</div><div class="day-sign__info"><div class="day-sign__nahuatl">Malinalli</div><div class="day-sign__meaning">Grass</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🎋</div><div class="day-sign__info"><div class="day-sign__nahuatl">Acatl</div><div class="day-sign__meaning">Reed</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🐆</div><div class="day-sign__info"><div class="day-sign__nahuatl">Ocelotl</div><div class="day-sign__meaning">Jaguar</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🦅</div><div class="day-sign__info"><div class="day-sign__nahuatl">Cuauhtli</div><div class="day-sign__meaning">Eagle</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🦃</div><div class="day-sign__info"><div class="day-sign__nahuatl">Cozcacuauhtli</div><div class="day-sign__meaning">Vulture</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">💫</div><div class="day-sign__info"><div class="day-sign__nahuatl">Ollin</div><div class="day-sign__meaning">Movement</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🗡️</div><div class="day-sign__info"><div class="day-sign__nahuatl">Tecpatl</div><div class="day-sign__meaning">Flint Knife</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🌧️</div><div class="day-sign__info"><div class="day-sign__nahuatl">Quiahuitl</div><div class="day-sign__meaning">Rain</div></div></div>
+          <div class="day-sign"><div class="day-sign__glyph">🌻</div><div class="day-sign__info"><div class="day-sign__nahuatl">Xochitl</div><div class="day-sign__meaning">Flower</div></div></div>
         </div>
 
         <!-- 20 Day Signs List -->
@@ -534,6 +622,8 @@
       </div>
     </section>
 
+    <div class="ornate-divider fade-in" aria-hidden="true"><span class="ornate-divider__glyph">&#10040;</span></div>
+
     <!-- ════════════ SECTION 4: RITUAL & CEREMONY ════════════ -->
     <section id="rituals" class="section section--alt">
       <div class="container">
@@ -567,6 +657,8 @@
         </div>
       </div>
     </section>
+
+    <div class="ornate-divider fade-in" aria-hidden="true"><span class="ornate-divider__glyph">&#10040;</span></div>
 
     <!-- ════════════ CTA BANNER ════════════ -->
     <section class="cta-banner">
@@ -639,6 +731,9 @@
   <!-- Scripts -->
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/visuals.js"></script>
+
+  <button class="back-to-top" aria-label="Back to top" title="Back to top">&#8593;</button>
 
 </body>
 </html>
