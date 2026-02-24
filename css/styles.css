@@ -1916,6 +1916,100 @@ blockquote {
   }
 }
 
+/* ---------- Contact Form ---------- */
+.contact-form {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+.contact-form__group {
+  margin-bottom: var(--space-lg);
+}
+
+.contact-form__label {
+  display: block;
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.contact-form__label span {
+  color: var(--color-terracotta);
+}
+
+.contact-form__input {
+  display: block;
+  width: 100%;
+  padding: var(--space-md);
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.contact-form__input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.contact-form__input:hover {
+  border-color: var(--color-gray-400);
+}
+
+.contact-form__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+}
+
+.contact-form__select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23757575' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-md) center;
+  padding-right: var(--space-2xl);
+  cursor: pointer;
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form__actions {
+  margin-top: var(--space-xl);
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-form {
+    background: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  .contact-form__input {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+
+  .contact-form__input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+  }
+
+  .contact-form__select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a0a0b0' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  }
+}
+
 /* ---------- Animations ---------- */
 .fade-in {
   opacity: 0;
