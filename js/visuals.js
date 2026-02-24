@@ -596,6 +596,389 @@ document.addEventListener('DOMContentLoaded', () => {
         }).join('')}
       `;
       container.appendChild(svg);
+    },
+
+    // Jaguar Warrior
+    jaguarWarrior(container) {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 400 500');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Illustration of a Mexica Jaguar Warrior');
+      svg.innerHTML = `
+        <defs>
+          <linearGradient id="jag-pelt" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#d4a843"/><stop offset="100%" stop-color="#b8860b"/>
+          </linearGradient>
+          <radialGradient id="jag-shield" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="#2a9d8f"/><stop offset="100%" stop-color="#0b4d4a"/>
+          </radialGradient>
+        </defs>
+        <rect width="400" height="500" fill="#1a1a2e"/>
+        <circle cx="200" cy="250" r="200" fill="#d4a843" opacity="0.03"/>
+        <!-- Body in jaguar pelt -->
+        <rect x="165" y="280" width="70" height="100" rx="8" fill="url(#jag-pelt)"/>
+        ${Array.from({length:12},(_, i)=>{const x=170+Math.random()*55,y=285+Math.random()*90;return `<circle cx="${x}" cy="${y}" r="3" fill="#5d4037" opacity="0.5"/>`;}).join('')}
+        <!-- Legs -->
+        <rect x="175" y="380" width="22" height="60" rx="4" fill="#d4a843"/>
+        <rect x="205" y="380" width="22" height="60" rx="4" fill="#d4a843"/>
+        ${Array.from({length:6},(_, i)=>`<circle cx="${180+Math.random()*14}" cy="${385+i*9}" r="2" fill="#5d4037" opacity="0.4"/><circle cx="${210+Math.random()*14}" cy="${385+i*9}" r="2" fill="#5d4037" opacity="0.4"/>`;).join('')}
+        <ellipse cx="186" cy="443" rx="16" ry="7" fill="#795548"/>
+        <ellipse cx="216" cy="443" rx="16" ry="7" fill="#795548"/>
+        <!-- Arms -->
+        <rect x="135" y="290" width="30" height="70" rx="8" fill="#d4a843" transform="rotate(-10,150,325)"/>
+        <rect x="235" y="290" width="30" height="70" rx="8" fill="#d4a843" transform="rotate(10,250,325)"/>
+        <!-- Shield -->
+        <circle cx="128" cy="350" r="32" fill="url(#jag-shield)" stroke="#2a9d8f" stroke-width="2"/>
+        <circle cx="128" cy="350" r="20" fill="none" stroke="#0b4d4a" stroke-width="1.5"/>
+        <ellipse cx="98" cy="370" rx="4" ry="15" fill="#e9c46a" transform="rotate(20,98,370)"/>
+        <ellipse cx="104" cy="375" rx="4" ry="15" fill="#c1440e" transform="rotate(15,104,375)"/>
+        <ellipse cx="110" cy="378" rx="4" ry="15" fill="#2a9d8f" transform="rotate(10,110,378)"/>
+        <!-- Spear (tepoztopilli) -->
+        <rect x="260" y="240" width="6" height="130" rx="2" fill="#795548"/>
+        <polygon points="263,240 253,215 273,215" fill="#1a1a2e"/>
+        <polygon points="263,222 257,215 269,215" fill="#333"/>
+        <!-- Jaguar headdress -->
+        <ellipse cx="200" cy="260" rx="55" ry="38" fill="#d4a843"/>
+        ${Array.from({length:15},(_, i)=>{const x=160+Math.random()*80,y=232+Math.random()*55;return `<circle cx="${x}" cy="${y}" r="3.5" fill="#5d4037" opacity="0.5"/>`;}).join('')}
+        <!-- Jaguar jaw -->
+        <path d="M165,268 Q180,285 200,280 Q220,285 235,268" fill="#b8860b" stroke="#795548" stroke-width="1"/>
+        <!-- Teeth -->
+        ${Array.from({length:6},(_, i)=>`<polygon points="${175+i*10},268 ${178+i*10},278 ${172+i*10},278" fill="#faf3e0"/>`;).join('')}
+        <!-- Jaguar eyes -->
+        <circle cx="182" cy="248" r="8" fill="#e9c46a"/>
+        <circle cx="218" cy="248" r="8" fill="#e9c46a"/>
+        <circle cx="182" cy="248" r="4" fill="#1a1a2e"/>
+        <circle cx="218" cy="248" r="4" fill="#1a1a2e"/>
+        <!-- Jaguar ears -->
+        <ellipse cx="165" cy="232" rx="12" ry="10" fill="#d4a843"/>
+        <ellipse cx="235" cy="232" rx="12" ry="10" fill="#d4a843"/>
+        <ellipse cx="165" cy="232" rx="7" ry="6" fill="#b8860b"/>
+        <ellipse cx="235" cy="232" rx="7" ry="6" fill="#b8860b"/>
+        <!-- Face visible below jaw -->
+        <circle cx="200" cy="275" r="14" fill="#a1887f"/>
+        <line x1="192" y1="273" x2="187" y2="280" stroke="#1a1a2e" stroke-width="2"/>
+        <line x1="208" y1="273" x2="213" y2="280" stroke="#1a1a2e" stroke-width="2"/>
+        <!-- Chest decoration -->
+        <circle cx="200" cy="310" r="10" fill="#2a9d8f" opacity="0.6"/>
+        <circle cx="200" cy="310" r="6" fill="#e9c46a" opacity="0.8"/>
+      `;
+      container.appendChild(svg);
+    },
+
+    // Marketplace Scene
+    marketplace(container) {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 800 400');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Illustration of the great Tlatelolco marketplace');
+      svg.innerHTML = `
+        <defs>
+          <linearGradient id="mkt-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#16213e"/><stop offset="100%" stop-color="#2a9d8f" stop-opacity="0.3"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#mkt-sky)"/>
+        <!-- Mountains -->
+        <polygon points="0,200 60,140 120,170 200,110 280,150 360,120 440,160 520,100 600,140 680,130 760,160 800,140 800,200" fill="#1b4332" opacity="0.3"/>
+        <!-- Temple silhouette -->
+        <polygon points="380,180 360,120 400,120" fill="#1a1a2e" opacity="0.5"/>
+        <rect x="365" y="110" width="30" height="15" rx="1" fill="#1a1a2e" opacity="0.5"/>
+        <!-- Ground -->
+        <rect x="0" y="250" width="800" height="150" fill="#5d4037"/>
+        <rect x="0" y="245" width="800" height="10" fill="#795548"/>
+        <!-- Market awnings -->
+        ${[80,200,320,440,560,680].map((x,i)=>`
+          <rect x="${x-35}" y="180" width="70" height="70" rx="2" fill="#795548" opacity="0.8"/>
+          <polygon points="${x-40},180 ${x},160 ${x+40},180" fill="${['#c1440e','#2a9d8f','#d4a843','#c1440e','#2a9d8f','#d4a843'][i]}" opacity="0.7"/>
+          <rect x="${x-30}" y="200" width="20" height="10" rx="2" fill="${['#e9c46a','#e76f51','#52b69a','#f4a261','#d4a843','#74c69d'][i]}" opacity="0.6"/>
+          <rect x="${x}" y="205" width="15" height="8" rx="2" fill="${['#52b69a','#d4a843','#e76f51','#74c69d','#e9c46a','#f4a261'][i]}" opacity="0.6"/>
+          <circle cx="${x-15}" cy="220" r="4" fill="${['#40916c','#e9c46a','#c1440e','#52b69a','#e76f51','#d4a843'][i]}" opacity="0.5"/>
+          <circle cx="${x+5}" cy="218" r="3" fill="${['#e9c46a','#c1440e','#40916c','#d4a843','#52b69a','#e76f51'][i]}" opacity="0.5"/>
+        `).join('')}
+        <!-- Figures (simplified people) -->
+        ${Array.from({length:18},(_, i)=>{
+          const x=50+i*42, y=260+Math.random()*20;
+          const c=['#a1887f','#8d6e63','#795548'][i%3];
+          return `<circle cx="${x}" cy="${y}" r="5" fill="${c}"/>
+                  <rect x="${x-4}" y="${y+5}" width="8" height="14" rx="2" fill="${['#2a9d8f','#c1440e','#d4a843','#e76f51'][i%4]}" opacity="0.7"/>`;
+        }).join('')}
+        <!-- Pottery display -->
+        <ellipse cx="140" cy="240" rx="8" ry="6" fill="#a1887f" opacity="0.7"/>
+        <ellipse cx="155" cy="242" rx="6" ry="5" fill="#8d6e63" opacity="0.7"/>
+        <ellipse cx="170" cy="241" rx="7" ry="5" fill="#795548" opacity="0.7"/>
+        <!-- Textile display -->
+        <rect x="280" y="235" width="30" height="15" rx="1" fill="#c1440e" opacity="0.5"/>
+        <rect x="285" y="237" width="8" height="4" fill="#e9c46a" opacity="0.4"/>
+        <rect x="296" y="237" width="8" height="4" fill="#2a9d8f" opacity="0.4"/>
+        <!-- Produce -->
+        ${Array.from({length:8},(_, i)=>`<circle cx="${470+i*8}" cy="${240-Math.random()*5}" r="3" fill="${['#40916c','#e9c46a','#c1440e','#52b69a'][i%4]}" opacity="0.6"/>`;).join('')}
+        <!-- Border decoration at bottom -->
+        <rect x="0" y="390" width="800" height="10" fill="#3e2723"/>
+      `;
+      container.appendChild(svg);
+    },
+
+    // Xochiquetzal Goddess
+    xochiquetzal(container) {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 500 600');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Illustration of Xochiquetzal, goddess of beauty and flowers');
+      svg.innerHTML = `
+        <defs>
+          <radialGradient id="xq-glow" cx="50%" cy="40%">
+            <stop offset="0%" stop-color="#e9c46a" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#e9c46a" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="xq-dress" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2a9d8f"/><stop offset="100%" stop-color="#0b4d4a"/>
+          </linearGradient>
+        </defs>
+        <rect width="500" height="600" fill="#16213e"/>
+        <circle cx="250" cy="280" r="250" fill="url(#xq-glow)"/>
+        <!-- Floating flowers -->
+        ${Array.from({length:20},(_, i)=>{
+          const x=50+Math.random()*400, y=50+Math.random()*500, s=6+Math.random()*8;
+          const c=['#e76f51','#e9c46a','#c1440e','#f4a261','#d4a843','#52b69a'][i%6];
+          return `<circle cx="${x}" cy="${y}" r="${s}" fill="${c}" opacity="${0.1+Math.random()*0.15}"/>`;
+        }).join('')}
+        <!-- Butterflies -->
+        ${Array.from({length:5},(_, i)=>{
+          const x=80+i*80, y=100+Math.random()*100;
+          return `<path d="M${x},${y} Q${x-12},${y-10} ${x-8},${y} Q${x-12},${y+10} ${x},${y}" fill="#e9c46a" opacity="0.2"/>
+                  <path d="M${x},${y} Q${x+12},${y-10} ${x+8},${y} Q${x+12},${y+10} ${x},${y}" fill="#d4a843" opacity="0.2"/>`;
+        }).join('')}
+        <!-- Body/dress -->
+        <path d="M210,350 Q200,400 180,500 L320,500 Q300,400 290,350 Z" fill="url(#xq-dress)"/>
+        <!-- Dress decoration -->
+        ${Array.from({length:8},(_, i)=>`<circle cx="${210+i*10}" cy="${400+i*10}" r="3" fill="#e9c46a" opacity="0.3"/>`;).join('')}
+        <!-- Arms -->
+        <path d="M210,350 Q180,380 160,370" stroke="#a1887f" stroke-width="12" fill="none" stroke-linecap="round"/>
+        <path d="M290,350 Q320,380 340,370" stroke="#a1887f" stroke-width="12" fill="none" stroke-linecap="round"/>
+        <!-- Flowers in hands -->
+        <circle cx="158" cy="365" r="10" fill="#e76f51" opacity="0.7"/>
+        <circle cx="158" cy="365" r="5" fill="#e9c46a" opacity="0.8"/>
+        <circle cx="342" cy="365" r="10" fill="#c1440e" opacity="0.7"/>
+        <circle cx="342" cy="365" r="5" fill="#d4a843" opacity="0.8"/>
+        <!-- Head -->
+        <circle cx="250" cy="310" r="30" fill="#a1887f"/>
+        <!-- Face -->
+        <circle cx="240" cy="305" r="4" fill="#5d4037"/>
+        <circle cx="260" cy="305" r="4" fill="#5d4037"/>
+        <circle cx="240" cy="305" r="1.5" fill="#1a1a2e"/>
+        <circle cx="260" cy="305" r="1.5" fill="#1a1a2e"/>
+        <path d="M244,318 Q250,323 256,318" fill="none" stroke="#795548" stroke-width="1.5"/>
+        <!-- Jewelry -->
+        <circle cx="250" cy="335" r="6" fill="#e9c46a"/>
+        <circle cx="250" cy="335" r="3" fill="#2a9d8f"/>
+        <circle cx="235" cy="330" r="3" fill="#e9c46a" opacity="0.7"/>
+        <circle cx="265" cy="330" r="3" fill="#e9c46a" opacity="0.7"/>
+        <!-- Elaborate headdress -->
+        <!-- Quetzal feathers -->
+        ${Array.from({length:9},(_, i)=>{
+          const angle=-40+i*10, x=250, y=275;
+          const len=40+Math.random()*20;
+          const c=['#2a9d8f','#52b69a','#40916c','#74c69d'][i%4];
+          return `<ellipse cx="${x}" cy="${y-len/2}" rx="5" ry="${len}" fill="${c}" opacity="0.7" transform="rotate(${angle},${x},${y})"/>`;
+        }).join('')}
+        <!-- Flowers in headdress -->
+        ${[{x:220,y:270,c:'#e76f51'},{x:235,y:260,c:'#e9c46a'},{x:250,y:255,c:'#c1440e'},{x:265,y:260,c:'#f4a261'},{x:280,y:270,c:'#e76f51'}].map(f=>
+          `<circle cx="${f.x}" cy="${f.y}" r="8" fill="${f.c}" opacity="0.8"/>
+           <circle cx="${f.x}" cy="${f.y}" r="4" fill="#e9c46a" opacity="0.6"/>`
+        ).join('')}
+        <!-- Gold headband -->
+        <path d="M215,285 Q250,275 285,285" fill="none" stroke="#d4a843" stroke-width="3"/>
+        <!-- Ear ornaments -->
+        <circle cx="218" cy="315" r="6" fill="#e9c46a"/>
+        <circle cx="282" cy="315" r="6" fill="#e9c46a"/>
+      `;
+      container.appendChild(svg);
+    },
+
+    // Ball Game
+    ballGame(container) {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 700 400');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Illustration of the Mesoamerican ritual ball game');
+      svg.innerHTML = `
+        <defs>
+          <linearGradient id="bg-court" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#3e2723"/>
+          </linearGradient>
+          <linearGradient id="bg-stone" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#8d6e63"/><stop offset="100%" stop-color="#5d4037"/>
+          </linearGradient>
+        </defs>
+        <rect width="700" height="400" fill="url(#bg-court)"/>
+        <!-- Torches -->
+        ${[100,600].map(x=>`
+          <rect x="${x-3}" y="60" width="6" height="100" fill="#795548"/>
+          <ellipse cx="${x}" cy="55" rx="10" ry="15" fill="#e76f51" opacity="0.6"/>
+          <ellipse cx="${x}" cy="50" rx="6" ry="10" fill="#e9c46a" opacity="0.5"/>
+          <ellipse cx="${x}" cy="45" rx="3" ry="6" fill="#fff" opacity="0.3"/>
+        `).join('')}
+        <!-- Court walls (sloped) -->
+        <polygon points="150,150 150,350 200,300 200,200" fill="url(#bg-stone)"/>
+        <polygon points="550,150 550,350 500,300 500,200" fill="url(#bg-stone)"/>
+        <!-- Wall texture -->
+        ${Array.from({length:6},(_, i)=>`
+          <line x1="155" y1="${160+i*32}" x2="195" y2="${205+i*16}" stroke="#6d4c41" stroke-width="0.5" opacity="0.4"/>
+          <line x1="545" y1="${160+i*32}" x2="505" y2="${205+i*16}" stroke="#6d4c41" stroke-width="0.5" opacity="0.4"/>
+        `).join('')}
+        <!-- Court floor -->
+        <polygon points="200,200 500,200 550,150 150,150" fill="#795548" opacity="0.3"/>
+        <polygon points="200,300 500,300 550,350 150,350" fill="#5d4037" opacity="0.4"/>
+        <rect x="200" y="200" width="300" height="100" fill="#6d4c41" opacity="0.5"/>
+        <!-- Center line -->
+        <line x1="350" y1="200" x2="350" y2="300" stroke="#d4a843" stroke-width="2" opacity="0.4"/>
+        <!-- Stone rings on walls -->
+        <circle cx="175" cy="240" r="18" fill="none" stroke="#a1887f" stroke-width="4"/>
+        <circle cx="175" cy="240" r="8" fill="#3e2723"/>
+        <circle cx="525" cy="240" r="18" fill="none" stroke="#a1887f" stroke-width="4"/>
+        <circle cx="525" cy="240" r="8" fill="#3e2723"/>
+        <!-- Player 1 (left) -->
+        <circle cx="290" cy="245" r="10" fill="#a1887f"/>
+        <rect x="284" y="255" width="12" height="20" rx="3" fill="#2a9d8f"/>
+        <ellipse cx="290" cy="262" rx="15" ry="6" fill="#8d6e63" opacity="0.6"/>
+        <!-- Player 2 (right) -->
+        <circle cx="410" cy="255" r="10" fill="#a1887f"/>
+        <rect x="404" y="265" width="12" height="20" rx="3" fill="#c1440e"/>
+        <ellipse cx="410" cy="272" rx="15" ry="6" fill="#8d6e63" opacity="0.6"/>
+        <!-- Ball -->
+        <circle cx="350" cy="240" r="12" fill="#3e2723" stroke="#1a1a2e" stroke-width="1.5"/>
+        <circle cx="350" cy="240" r="10" fill="#5d4037"/>
+        <path d="M343,235 Q350,230 357,235" fill="none" stroke="#3e2723" stroke-width="1"/>
+        <!-- Spectators (top) -->
+        ${Array.from({length:12},(_, i)=>{
+          const x=200+i*27;
+          return `<circle cx="${x}" cy="${140-Math.random()*15}" r="4" fill="${['#a1887f','#8d6e63','#795548'][i%3]}"/>`;
+        }).join('')}
+        <!-- Spectators (bottom) -->
+        ${Array.from({length:12},(_, i)=>{
+          const x=200+i*27;
+          return `<circle cx="${x}" cy="${360+Math.random()*15}" r="4" fill="${['#a1887f','#8d6e63','#795548'][i%3]}"/>`;
+        }).join('')}
+        <!-- Temple silhouette background -->
+        <polygon points="340,60 330,30 350,10 370,30 360,60" fill="#1a1a2e" opacity="0.3"/>
+      `;
+      container.appendChild(svg);
+    },
+
+    // Aqueduct Scene
+    aqueduct(container) {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 800 350');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Illustration of the Chapultepec aqueduct of Tenochtitlan');
+      svg.innerHTML = `
+        <defs>
+          <linearGradient id="aq-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#16213e"/><stop offset="60%" stop-color="#2a9d8f" stop-opacity="0.2"/><stop offset="100%" stop-color="#0b4d4a" stop-opacity="0.4"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="350" fill="url(#aq-sky)"/>
+        <!-- Mountains -->
+        <polygon points="0,180 80,120 140,150 220,100 300,130 400,110 500,140 580,100 660,130 750,120 800,150 800,200 0,200" fill="#1b4332" opacity="0.25"/>
+        <!-- Lake water -->
+        <rect x="0" y="250" width="800" height="100" fill="#0b4d4a" opacity="0.5"/>
+        <path d="M0 270 Q40 265 80 270 Q120 275 160 270 Q200 265 240 270 Q280 275 320 270 Q360 265 400 270 Q440 275 480 270 Q520 265 560 270 Q600 275 640 270 Q680 265 720 270 Q760 275 800 270" fill="none" stroke="#2a9d8f" stroke-width="1" opacity="0.3"/>
+        <!-- Chapultepec hill (left) -->
+        <ellipse cx="60" cy="220" rx="80" ry="50" fill="#2d6a4f" opacity="0.5"/>
+        <ellipse cx="50" cy="200" rx="30" ry="40" fill="#40916c" opacity="0.4"/>
+        <ellipse cx="80" cy="210" rx="25" ry="35" fill="#2d6a4f" opacity="0.4"/>
+        <!-- Spring source -->
+        <circle cx="60" cy="235" r="8" fill="#2a9d8f" opacity="0.5"/>
+        <text x="60" y="180" text-anchor="middle" fill="#d4a843" font-size="9" font-family="serif" opacity="0.6">Chapultepec</text>
+        <!-- Aqueduct pillars and channel -->
+        ${Array.from({length:14},(_, i)=>{
+          const x=100+i*45;
+          return `
+            <rect x="${x-3}" y="210" width="6" height="40" fill="#8d6e63"/>
+            <rect x="${x-8}" y="208" width="16" height="6" rx="1" fill="#a1887f"/>
+            ${i<13?`<rect x="${x+2}" y="205" width="43" height="4" rx="1" fill="#a1887f"/>
+            <rect x="${x+5}" y="202" width="37" height="3" rx="1" fill="#2a9d8f" opacity="0.5"/>`:``}
+          `;
+        }).join('')}
+        <!-- Water flow on top -->
+        <path d="M100 203 L720 203" stroke="#2a9d8f" stroke-width="2" opacity="0.4"/>
+        <!-- City buildings (right) -->
+        <rect x="700" y="190" width="30" height="50" rx="2" fill="#795548" opacity="0.6"/>
+        <rect x="720" y="200" width="25" height="40" rx="2" fill="#8d6e63" opacity="0.5"/>
+        <rect x="740" y="195" width="20" height="45" rx="2" fill="#795548" opacity="0.5"/>
+        <rect x="755" y="205" width="25" height="35" rx="2" fill="#6d4c41" opacity="0.5"/>
+        <!-- Temple at city end -->
+        <polygon points="760,190 750,170 770,170" fill="#c1440e" opacity="0.4"/>
+        <text x="740" y="180" text-anchor="middle" fill="#d4a843" font-size="9" font-family="serif" opacity="0.6">Tenochtitlan</text>
+        <!-- Canoe -->
+        <path d="M400,280 Q410,273 430,273 Q450,273 460,280 Q450,285 430,285 Q410,285 400,280Z" fill="#795548" opacity="0.6"/>
+        <!-- Labels -->
+        <text x="400" y="195" text-anchor="middle" fill="#d4a843" font-size="10" font-family="serif" opacity="0.5">Aqueduct of Chapultepec</text>
+      `;
+      container.appendChild(svg);
+    },
+
+    // Mictlan Underworld
+    mictlan(container) {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 500 700');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Illustration of Mictlan, the nine levels of the Nahua underworld');
+      const levels = [
+        {y:0,h:70,color:'#1a1a2e',label:'Surface World',accent:'#52b69a'},
+        {y:70,h:70,color:'#16213e',label:'Apanohuayan — River Crossing',accent:'#2a9d8f'},
+        {y:140,h:70,color:'#1a1a2e',label:'Tepetl Monamictia — Clashing Mountains',accent:'#8d6e63'},
+        {y:210,h:70,color:'#0a0a0a',label:'Itztepetl — Obsidian Wind',accent:'#a1887f'},
+        {y:280,h:70,color:'#16213e',label:'Cehueloya — Freezing Wind',accent:'#2a9d8f'},
+        {y:350,h:70,color:'#1a1a2e',label:'Pancuecuetlaca — Flayed Banners',accent:'#c1440e'},
+        {y:420,h:70,color:'#0a0a0a',label:'Temiminaloyan — Arrow Piercing',accent:'#e76f51'},
+        {y:490,h:70,color:'#16213e',label:'Teocoyolcualloya — Heart Devouring',accent:'#7f2b0e'},
+        {y:560,h:70,color:'#1a1a2e',label:'Apanohualoyan — Final Waters',accent:'#0b4d4a'},
+        {y:630,h:70,color:'#0a0a0a',label:'Chicunamictlan — The Ninth Level',accent:'#d4a843'}
+      ];
+      svg.innerHTML = `
+        ${levels.map((l,i)=>`
+          <rect x="0" y="${l.y}" width="500" height="${l.h}" fill="${l.color}"/>
+          ${i>0?`<line x1="0" y1="${l.y}" x2="500" y2="${l.y}" stroke="${l.accent}" stroke-width="0.5" opacity="0.3"/>`:``}
+          <text x="250" y="${l.y+20}" text-anchor="middle" fill="${l.accent}" font-size="9" font-family="serif" opacity="0.6">${l.label}</text>
+        `).join('')}
+        <!-- Level 1: River with dog -->
+        <path d="M100,110 Q200,100 300,110 Q400,120 450,110" fill="none" stroke="#2a9d8f" stroke-width="2" opacity="0.4"/>
+        <ellipse cx="350" cy="115" rx="10" ry="6" fill="#a1887f" opacity="0.5"/>
+        <!-- Level 2: Clashing mountains -->
+        <polygon points="150,200 180,160 210,200" fill="#5d4037" opacity="0.3"/>
+        <polygon points="290,200 320,160 350,200" fill="#5d4037" opacity="0.3"/>
+        <!-- Level 3: Obsidian shards -->
+        ${Array.from({length:8},(_, i)=>`<polygon points="${120+i*35},270 ${125+i*35},240 ${130+i*35},270" fill="#1a1a2e" stroke="#333" stroke-width="0.5" opacity="0.5"/>`;).join('')}
+        <!-- Level 4: Wind lines -->
+        ${Array.from({length:5},(_, i)=>`<path d="M${80+i*80},310 Q${100+i*80},300 ${120+i*80},310 Q${140+i*80},320 ${160+i*80},310" fill="none" stroke="#2a9d8f" stroke-width="1" opacity="0.3"/>`;).join('')}
+        <!-- Level 5: Banners -->
+        ${Array.from({length:4},(_, i)=>{
+          const x=150+i*60;
+          return `<rect x="${x}" y="365" width="3" height="30" fill="#795548" opacity="0.4"/>
+                  <rect x="${x+3}" y="367" width="15" height="8" rx="1" fill="#c1440e" opacity="0.3"/>`;
+        }).join('')}
+        <!-- Level 6: Arrows -->
+        ${Array.from({length:6},(_, i)=>`<line x1="${100+i*60}" y1="455" x2="${130+i*60}" y2="435" stroke="#a1887f" stroke-width="1.5" opacity="0.3"/>`;).join('')}
+        <!-- Level 7: Heart symbol -->
+        <text x="250" y="535" text-anchor="middle" font-size="20" opacity="0.2">&#10084;</text>
+        <!-- Level 8: Final waters -->
+        <path d="M50,595 Q150,585 250,595 Q350,605 450,595" fill="none" stroke="#0b4d4a" stroke-width="2" opacity="0.4"/>
+        <!-- Level 9: Mictlantecuhtli (skeletal figure) -->
+        <circle cx="250" cy="665" r="15" fill="none" stroke="#d4a843" stroke-width="1.5" opacity="0.5"/>
+        <circle cx="244" cy="661" r="3" fill="#1a1a2e"/>
+        <circle cx="256" cy="661" r="3" fill="#1a1a2e"/>
+        <line x1="248" y1="668" x2="252" y2="668" stroke="#d4a843" stroke-width="1" opacity="0.5"/>
+        <line x1="244" y1="672" x2="256" y2="672" stroke="#d4a843" stroke-width="1" opacity="0.4"/>
+        <!-- Descending souls (dots from top to bottom) -->
+        ${Array.from({length:9},(_, i)=>`<circle cx="${250+Math.sin(i)*30}" cy="${60+i*70}" r="3" fill="#d4a843" opacity="${0.4-i*0.03}"/>`;).join('')}
+        <!-- Bone motifs along edges -->
+        ${Array.from({length:14},(_, i)=>`
+          <ellipse cx="20" cy="${50+i*48}" rx="3" ry="8" fill="#a1887f" opacity="0.1"/>
+          <ellipse cx="480" cy="${50+i*48}" rx="3" ry="8" fill="#a1887f" opacity="0.1"/>
+        `).join('')}
+      `;
+      container.appendChild(svg);
     }
   };
 
@@ -612,6 +995,12 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'codex-page': SVGLib.codexPage(container); break;
       case 'tenochtitlan-map': SVGLib.tenochtitlanMap(container); break;
       case 'sun-bg': SVGLib.sunBackground(container, parseInt(param) || 5); break;
+      case 'jaguar-warrior': SVGLib.jaguarWarrior(container); break;
+      case 'marketplace': SVGLib.marketplace(container); break;
+      case 'xochiquetzal': SVGLib.xochiquetzal(container); break;
+      case 'ball-game': SVGLib.ballGame(container); break;
+      case 'aqueduct': SVGLib.aqueduct(container); break;
+      case 'mictlan': SVGLib.mictlan(container); break;
     }
   });
 
